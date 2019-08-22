@@ -2,6 +2,8 @@
 
 AOS.init();
 
+// Mobile menu
+
 $('[data-mobile]').click(function() {
     var selector = $(this).attr('data-mobile');
     
