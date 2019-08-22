@@ -1,3 +1,7 @@
+// AOS Animation
+
+AOS.init();
+
 $('[data-mobile]').click(function() {
     var selector = $(this).attr('data-mobile');
     
@@ -9,4 +13,6 @@ $('[data-mobile]').click(function() {
       $('.overlay').addClass('active');
       $('.mobile-nav').addClass('active');
     }
-  });
+});
+
+  
