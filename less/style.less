@@ -17,7 +17,6 @@ html, body {
 
 @color: #fff; 
 
-
 .flex-wrap {
     max-width: 1200px;
     margin: 0 auto;
@@ -25,9 +24,106 @@ html, body {
     box-sizing: border-box;
 }
 
+.menu-container {
+    .overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .5);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease;
+        z-index: 99999;
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 60%;
+        background-color: #ffffff;
+        transform: translateX(-100%);
+        transition: all 0.4s ease;
+        z-index: 99999;
+        display: none;
+	    padding: 15px 10px;
+
+        &.active {
+            transform: translateX(0);
+            padding: 0;
+        }
+
+        .logo {
+            padding: 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+
+            img {
+                padding: 10px;
+                width: 50%;
+
+            }
+            span {
+                z-index: 3;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 8px 10px;
+                background-color: #fff;
+            }
+        }
+
+        .mobile-section {
+            padding: 30px;
+
+            h6 {
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-bottom: 20px;
+                font-size: 18px;
+            }
+
+            .mobile-menu {
+                li {
+                    border-bottom: 1px solid #eee;
+                    margin-bottom: 20px;
+                    padding: 15px 0;
+                    font-weight: 500;
+
+                    span {
+                        width: 20px;
+                        text-align: center;
+                        margin-right: 15px;
+                    }
+                    
+                    a {
+                        font-size: 16px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
 .mobile-nav {
-	display: none;
-	padding: 15px 10px;
+	
 
 	.logo {
 		display: flex;
@@ -38,9 +134,9 @@ html, body {
 		img {
 			width: 50%;
 		}
-	}
+    }
+    
 	ul {
-
 		li {
 			margin-bottom: 5px;
 		}
@@ -163,6 +259,7 @@ header {
 .history {
     background-color: #dcdde1;
     padding: 100px 0;
+
     .history-content {
         text-align: center;
 
@@ -173,7 +270,7 @@ header {
             margin: 0 70px;
             padding-bottom: 30px;
 
-            &:after {
+            &::after {
                 content: "";
                 display: inline-block;
                 width: 100%;
@@ -263,7 +360,7 @@ header {
                 font-size: 3.57rem;
                 color: #273c75;
 
-                &:after {
+                &::after {
                     content: "";
                     display: inline-block;
                     width: 100%;
@@ -359,7 +456,6 @@ header {
             border: 1px solid #fff;
 
             .form-header {
-
                 h3 {
                     text-transform: uppercase;
                     font-size: 1.28rem;
@@ -438,11 +534,11 @@ footer {
                 font-size: 1.14rem;
             }
         }
+
         .footer-icons {
             img {
                 width: 200px;
             }
-            
         }
     }
 }
