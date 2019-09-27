@@ -280,6 +280,7 @@ header .top-header-content .header-navigation .menu li a {
 .random-block .random-content .random-icons span {
   font-size: 3rem;
   color: #fff;
+  cursor: pointer;
 }
 .section-cards {
   background-color: #dcdde1;
@@ -445,4 +446,5 @@ footer .footer-container .footer-text p {
 }
 footer .footer-container .footer-icons img {
   width: 200px;
+  cursor: pointer;
 }
